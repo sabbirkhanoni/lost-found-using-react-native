@@ -1,5 +1,5 @@
 import Router from "express";
-import { isAuthenticated } from "../middleware/isAuthenticated.js";
+import {isAuthenticated} from "../middlewares/isAuthenticaed.js";
 import {
     signUpController,
     verifySignUpOTPController,
@@ -10,7 +10,7 @@ import {
     forgetPasswordRequestController,
     verifyOTPController,
     resetPasswordController,
-} from "../controllers/auth.controller.js";
+} from "../Controllers/auth.controller.js";
 
 const router = Router();
 

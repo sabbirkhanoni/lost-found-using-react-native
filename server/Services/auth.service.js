@@ -1,8 +1,8 @@
 import bcrypt from "bcryptjs";
-import UserModel from "../models/user.model.js";
+import UserModel from "../models/auth.model.js";
 import sendEmail from "../config/sendEmail.js";
 import OTPSendingTemplate from "../utils/OTPSendingTemplate.js";
-import { generateOTP } from "../utils/generateOTP.js";
+import {generateOTP} from "../utils/generateOTP.js";
 
 export const signUpService = async (payload) => {
   const { name, email, phone, password } = payload;

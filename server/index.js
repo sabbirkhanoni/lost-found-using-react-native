@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import connectDB from './config/connectDB.js';
+import authRoutes from './routes/auth.route.js';
 
 const app = express();
 
@@ -29,6 +30,8 @@ app.get("/", (request, response) => {
         message: "Hello from server! Server is Running on port " + PORT 
     });
 });
+
+app.use("/api/auth", authRoutes);
 
 connectDB();
 
