@@ -20,13 +20,10 @@ const userSchema = new mongoose.Schema(
     phone: {
       type: String,
       trim: true,
-      match: /^\+?[1-9]\d{1,14}$/,
+      match: /^01[3-9]\d{8}$/,
     },
     password: {
       type: String,
-      minlength: 6,
-      maxlength: 26,
-      match: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,26}$/,
       required: true,
     },
     avatar: {

@@ -46,7 +46,7 @@ export const signUpService = async (payload) => {
 
   await sendEmail({
     sendTo: email,
-    subject: "Verify your Ferot account",
+    subject: "Verify your Lost And Found AI account",
     html: OTPSendingTemplate({ name, otp }),
   });
 
@@ -101,7 +101,7 @@ export const resendOTPService = async (email) => {
 
   await sendEmail({
     sendTo: email,
-    subject: "Your new Ferot verification code",
+    subject: "Your new Lost And Found AI verification code",
     html: OTPSendingTemplate({ name: user.name, otp }),
   });
 };
@@ -163,7 +163,7 @@ export const forgetPasswordRequestService = async (payload) => {
 
   await sendEmail({
     sendTo: email,
-    subject: "Reset your Ferot password",
+    subject: "Reset your Lost And Found AI password",
     html: OTPSendingTemplate({ name: user.name, otp }),
   });
 };

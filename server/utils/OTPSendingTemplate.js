@@ -17,7 +17,7 @@ const OTPSendingTemplate = ({name, otp})=> {
                         <!-- Header Section -->
                         <tr>
                             <td style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%); padding: 60px 40px; text-align: center; border-radius: 24px 24px 0 0;">
-                                <h1 style="margin: 0; color: #ffffff; font-size: 36px; font-weight: 800; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Welcome to VR Application</h1>
+                                <h1 style="margin: 0; color: #ffffff; font-size: 36px; font-weight: 800; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Welcome to Lost And Found AI</h1>
                                 <p style="color: rgba(255, 255, 255, 0.9); font-size: 20px; margin: 12px 0 0;">Your Exclusive Journey Begins</p>
                             </td>
                 </tr>
@@ -87,13 +87,13 @@ const OTPSendingTemplate = ({name, otp})=> {
                                     </tr>
                                 </table>
 
-                                <p style="color: #64748b; font-size: 14px; margin: 24px 0;">© 2025 VR Application. All rights reserved.</p>
+                                <p style="color: #64748b; font-size: 14px; margin: 24px 0;">© 2025 Lost And Found AI. All rights reserved.</p>
 
                                 <div style="display: inline-block; padding: 8px 16px; background-color: white; border-radius: 20px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);">
                                     <p style="margin: 0; color: #64748b; font-size: 14px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                                             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.5l7 4.5 7-4.5V4a1 1 0 0 0-1-1H2zm0 9h12a1 1 0 0 0 1-1v-4.5l-7 4.5-7-4.5V12a1 1 0 0 0 1 1z"/>
-                                        </svg> vr.application@gmail.com
+                                        </svg> lostandfoundai@gmail.com
                                     </p>
                                 </div>
                             </td>
