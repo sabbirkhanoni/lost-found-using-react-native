@@ -6,7 +6,8 @@ import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import connectDB from './config/connectDB.js';
-import authRoutes from './routes/auth.route.js';
+import authRoutes from "./Routes/auth.route.js";
+import itemRouter from "./Routes/item.route.js";
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.get("/", (request, response) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/item", itemRouter);
 
 connectDB();
 

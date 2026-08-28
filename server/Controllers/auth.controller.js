@@ -8,7 +8,7 @@ import {
   forgetPasswordRequestService,
   verifyOTPService,
   resetPasswordService,
-} from "../services/auth.service.js";
+} from "../Services/auth.service.js";
 
 export const signUpController = async (request, response) => {
   try {
