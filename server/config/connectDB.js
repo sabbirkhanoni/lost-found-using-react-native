@@ -4,21 +4,27 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-if(!process.env.MONGODB_URI){
-    throw new Error(
-        "Please define the MONGODB_URI environment variable inside .env.local"
-    )
-}
+let isConnected = false;
 
 async function connectDB() {
+    if (isConnected) {
+        return;
+    }
+
+    if (!process.env.MONGODB_URI) {
+        console.warn("⚠️ Warning: MONGODB_URI is not defined in environment variables!");
+        return;
+    }
+
     try {
-        await mongoose.connect(process.env.MONGODB_URI, {
+        const db = await mongoose.connect(process.env.MONGODB_URI, {
             autoIndex: true,
-        })
-        console.log('Connected to the database');
-    }catch(error){
-        console.log('Error while connecting to the database', error);
-        process.exit(1);
+            serverSelectionTimeoutMS: 5000,
+        });
+        isConnected = db.connections[0].readyState === 1;
+        console.log('✅ Connected to MongoDB database successfully!');
+    } catch (error) {
+        console.error('❌ MongoDB connection error:', error.message || error);
     }
 }
 
